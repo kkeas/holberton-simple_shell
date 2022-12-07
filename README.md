@@ -1,1 +1,1 @@
-<img src=”https://userimages.githubusercontent.com/75753187/123358567-aac7b900-d539-11eb-8275-0b380264bb4c.png" alt=”my banner”>![Black Modern Minimalist Simple Technology Banner](https://user-images.githubusercontent.com/108370739/206229713-64eea593-8267-4f82-b51e-11d9858650ef.png)
+![Black Modern Minimalist Simple Technology Banner](https://user-images.githubusercontent.com/108370739/206229713-64eea593-8267-4f82-b51e-11d9858650ef.png)
