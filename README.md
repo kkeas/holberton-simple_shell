@@ -38,33 +38,7 @@ hsh main.c shell.c
 $
 ```
 
-
-
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!---Taylor STATS--->
-
 Taylor
 
 [![Anurag’s github stats](https://github-readme-stats.vercel.app/api?username=WoodsonTD)](https://github.com/WoodsonTD)
@@ -72,7 +46,6 @@ Taylor
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=WoodsonTD&layout=compact)](https://github.com/WoodsonTD)
 
 <!---Kat STATS--->
-
 Kat
 
 [![Anurag’s github stats](https://github-readme-stats.vercel.app/api?username=WoodsonTD)](https://github.com/kkeas)
