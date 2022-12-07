@@ -36,7 +36,6 @@ hsh main.c shell.c
 ($)
 ($) exit
 $
-```
 
 <!---Taylor STATS--->
 Taylor
