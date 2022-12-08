@@ -1,39 +1,41 @@
 #include "shell.h"
 
-int main(int ac, char **argv)
+int main(void)
 {
-	char *buffer = NULL, *buffercopy = NULL;
+	char *prompt = "$ ";
+	char *fullcommand = NULL, *copycommand = NULL;
 	size_t len = 0;
-	size_t readnchars;
+	ssize_t readnchars;
 	const char *delim = " \n";
+	char **argv;
 	int num_tokens = 0;
 	char *token;
 	int i;
 
-	(void)ac;
+	readnchars = getline(&fullcommand, &len, stdin);
 
 	while (1)
 	{
-		printf("$ ");
-		readnchars = getline(&buffer, &len, stdin);
+		printf("%s", prompt);
+		readnchars = getline(&fullcommand, &len, stdin);
 
 		if (readnchars == -1)
 		{
-			printf("Error\n");
+			printf("Exiting shell....\n");
 			return (-1);
 		}
 
-	buffercopy = malloc(sizeof(char) * readnchars);
-	if (buffercopy == NULL)
+	copycommand = malloc(sizeof(char) * readnchars);
+	if (copycommand == NULL)
 	{
 		perror("memory allocation error");
 		return (-1);
 	}
 
 	/*go back and use _strcpy from prev project*/
-	strcpy(buffercopy, buffer);
+	strcpy(copycommand, fullcommand);
 
-	token = strtok(buffer, delim);
+	token = strtok(fullcommand, delim);
 
 	while (token != NULL)
 	{
@@ -44,7 +46,7 @@ int main(int ac, char **argv)
 
 	argv = malloc(sizeof(char *) * num_tokens);
 
-	token = strtok(buffercopy, delim);
+	token = strtok(copycommand, delim);
 
 	for (i = 0; token != NULL; i++)
 	{
@@ -56,8 +58,9 @@ int main(int ac, char **argv)
 	}
 	argv[i] = NULL;
 
-	printf("%s\n", buffer);
+	printf("%s\n", fullcommand);
+	
+	free(fullcommand);
 	}
-	free(buffer);
 	return (0);
 }
