@@ -1,11 +1,16 @@
 #include "shell.h"
-
-/**
- * prompt - what to print
- * Return: none
- **/
+#include <stdio.h>
+#include <stdlib.h>
 
 void prompt(void)
 {
-	write(STDOUT_FILENO, "$ ", 2); /* print the dollar sign to std out*/
-}
+	char *buffer = malloc(1024);
+	size_t len = 1024;
+
+	while (1)
+	{
+		printf("$ ");
+		getline(&buffer, &len, stdin);
+	}
+	return (0);
+}	
