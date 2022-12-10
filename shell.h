@@ -9,17 +9,20 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <signal.h>
+
 /*extern enviroment variable*/
 extern char **environ;
+
 /*Helper functions*/
 void prompt(void);
-char **sp_string(char *string, char *del);
+char **strsplit(char *string, char *delim);
 int _strcmp(char *s1, char *s2);
 char *_strcpy(char *dest, char *src);
 char *_strcat(char *string, char *stradd);
 char *_strdup(const char *str);
 int _strlen(char *str);
 int child(char **array, char *av[], int cont);
+
 /*free functions*/
 void free_arraybid(char **array);
 
