@@ -1,24 +1,11 @@
 #include "shell.h"
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
 
-int _prompt(int n, char **buffer)
+/**
+ * prompt - what to print
+ * Return: none
+ **/
+
+void prompt(void)
 {
-	char *prompt = "$ ";
-	 *buffer = malloc(1024);
-       	n = 0;
-	int readnchars;
-
-	while (1)
-	{
-		printf("%s", prompt);
-		readnchars = getline(&buffer, &n, stdin);
-	}
-	if (readnchars == -1)
-	{
-		printf("Exiting Shell....\n");
-		return (-1);
-	}
-	return (n);
+	write(STDOUT_FILENO, "$ ", 2); /* print the dollar sign to std out*/
 }
