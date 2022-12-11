@@ -19,7 +19,7 @@ int child(char **array, char *av[], int cnt)
 
 	if (stat(array[0], &buf) == -1)
 	{
-		error_print(array, av, cnt, 126);
+		print_errors(array, av, cnt, 126);
 		return (126);
 	}
 	ch = fork();

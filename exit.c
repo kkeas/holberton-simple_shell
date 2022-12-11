@@ -8,9 +8,9 @@
  *@ret_stat: last status to exit
  *Return: status
  */
-int exitfunc(char **array, char *av[], char *line, int cnt, int ret_stat)
+int exitfunc(char **array, char *av[], char *line, int count, int ret_status)
 {
-	int i = 0, exit_stat, num;
+	int i = 0, exit_status, num;
 
 	while (array[i] != NULL)
 	{
@@ -20,7 +20,7 @@ int exitfunc(char **array, char *av[], char *line, int cnt, int ret_stat)
 	{
 		free(array);
 		free(line);
-		exit(ret_stat);
+		exit(ret_status);
 	}
 	if (i >= 2)
 	{
@@ -29,16 +29,16 @@ int exitfunc(char **array, char *av[], char *line, int cnt, int ret_stat)
 			num = _isdigit(array[1][i]);
 			if (num == 0)
 			{
-				error_print(array, av, cnt, 2);
-				ret_stat = 2;
-				return (ret_stat);
+				print_errors(array, av, count, 2);
+				ret_status = 2;
+				return (ret_status);
 			}
 		}
-		exit_stat = _atoi(array[1]);
+		exit_status = _atoi(array[1]);
 		free(array);
 		free(line);
-		exit(exit_stat);
+		exit(exit_status);
 	}
 
-	return (ret_stat);
+	return (ret_status);
 }

@@ -7,7 +7,7 @@
  * @num: indicates the error
  * Return: None
  */
-void print_errors(char **array, char *av[], int cont, int num)
+void print_errors(char **array, char *av[], int count, int num)
 {
 	int lnav, lnarray;
 
@@ -18,7 +18,7 @@ void print_errors(char **array, char *av[], int cont, int num)
 	{
 		write(STDOUT_FILENO, av[0], lnav);
 		write(STDOUT_FILENO, " : ", 3);
-		print_integer(cont);
+		print_integer(count);
 		write(STDOUT_FILENO, ": ", 2);
 		write(STDOUT_FILENO, array[0], lnarray);
 		write(STDOUT_FILENO, ": ", 2);
@@ -63,7 +63,7 @@ int recursion_int(int n, int count)
 
 	if (num / 10)
 	{
-		count = recursion_int(num / 10, cont = cont + 1);
+		count = recursion_int(num / 10, count = count + 1);
 	}
 	_putchar((num % 10) + '0');
 	return (count);
