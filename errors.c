@@ -3,7 +3,7 @@
  * print_errors - print errors of the program
  * @array: array of comand and arguments
  * @av: array from main
- * @cont: count the number prompts
+ * @count: count the number prompts
  * @num: indicates the error
  * Return: None
  */

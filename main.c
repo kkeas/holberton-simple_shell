@@ -22,7 +22,7 @@ int main(int ac __attribute__((unused)), char *av[])
 			prompt();
 		if (getline(&line, &n, stdin) == EOF) /* reads lines from stdin */
 			break;
-		array = strsplit(line," \n\t");  /* tokenizes the line*/
+		array = strsplit(line, " \n\t");  /* tokenizes the line*/
 		if (array == NULL || array[0] == NULL)
 		{
 			free(array);
