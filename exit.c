@@ -4,8 +4,8 @@
  *@array: array of command
  *@av: argument vector of main
  *@line: getline buffer to free
- *@cnt: execution count
- *@ret_stat: last status to exit
+ *@count: execution count
+ *@ret_status: last status to exit
  *Return: status
  */
 int exitfunc(char **array, char *av[], char *line, int count, int ret_status)
